@@ -93,8 +93,8 @@ TEST_CASE("colorPicker::basic solid","[weight=1][part=colorPicker]"){
 
 TEST_CASE("colorPicker::basic gradient","[weight=1][part=colorPicker]"){
     HSLAPixel px1, px2;
-    px1.h = 100.; px1.s = 1.0; px1.l = 0.5; 
-    px2.h = 200.; px2.s = 1.0; px2.l = 0.5;
+    px1.h = 0; px1.s = 1.0; px1.l = 0.5; 
+    px2.h = 240; px2.s = 1.0; px2.l = 0.5;
 
     gradientColorPicker gradientPicker(px1, px2, FUNCTORTESTRADIUS,
                                        FUNCTORTESTX, FUNCTORTESTY);
