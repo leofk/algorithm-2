@@ -1,5 +1,8 @@
-# algorithm-2
-program about gradients. 
+# Fills
 
-./testFills
-./testStackQueue
+
+
+Tests:
+- ./testFills
+- ./testStackQueue
+- Output PNGs in /images 
