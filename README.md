@@ -1,8 +1,10 @@
-# Floord Fill
+# Flood Fill
 
+Input in /originals
+Output in /images
 
-
-Tests:
+Run:
+- ./main
 - ./testFills
 - ./testStackQueue
-- Output PNGs in /images 
+
