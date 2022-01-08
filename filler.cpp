@@ -125,7 +125,6 @@ animation filler::fill(PNG& img, int x, int y, colorPicker& fillColor, double to
 }
 
     /**
-     * @todo You need to implement this function!
      *
      * This is the basic description of a flood-fill algorithm: Every fill
      * algorithm requires an ordering structure, which is passed to this
