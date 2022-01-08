@@ -1,6 +1,8 @@
 TESTSQ = testStackQueue
 TESTFILLS = testFills
+EXE = main
 
+OBJS_EXE = solidColorPicker.o gradientColorPicker.o animation.o PNG.o HSLAPixel.o lodepng.o gridColorPicker.o rainbowColorPicker.o main.o
 OBJS_FILLS_STUDENT = testFills.o solidColorPicker.o gradientColorPicker.o 
 OBJS_FILLS_PROVIDED = animation.o PNG.o HSLAPixel.o lodepng.o gridColorPicker.o rainbowColorPicker.o 
 OBJS_SQ = testStackQueue.o
@@ -10,7 +12,10 @@ LD = clang++
 CXXFLAGS = -std=c++1y -stdlib=libc++ -c -g -O0 -Wall -Wextra -pedantic
 LDFLAGS = -std=c++1y -stdlib=libc++ -lc++abi -lpthread -lm
 
-all: $(TESTSQ) $(TESTFILLS)
+all: $(EXE) $(TESTSQ) $(TESTFILLS)
+
+$(EXE) : $(OBJS_EXE)
+	$(LD) $(OBJS_EXE) $(LDFLAGS) -o $(EXE)
 
 $(TESTSQ) : $(OBJS_SQ)
 	$(LD) $(OBJS_SQ) $(LDFLAGS) -o $(TESTSQ)
@@ -23,6 +28,9 @@ testStackQueue.o : testStackQueue.cpp cs221util/PNG.h cs221util/HSLAPixel.h stac
 
 testFills.o : testFills.cpp cs221util/PNG.h cs221util/HSLAPixel.h stack.h queue.h filler.h filler.cpp solidColorPicker.h gradientColorPicker.h rainbowColorPicker.h gridColorPicker.h 
 	$(CXX) $(CXXFLAGS) testFills.cpp
+
+main.o : main.cpp cs221util/PNG.h cs221util/HSLAPixel.h stack.h queue.h filler.h filler.cpp solidColorPicker.h gradientColorPicker.h rainbowColorPicker.h gridColorPicker.h
+	$(CXX) $(CXXFLAGS) main.cpp
 
 # Pattern rules for object files
 %.o: %.cpp 
