@@ -1,6 +1,6 @@
 # Flood Fill
 
-Applying Stack and Queue ADT to manipulate PNGs & GIFs
+Applying Stack & Queue ADT to implement BFS & DFS traversals to manipulate PNGs & GIFs.
 
 Input in /originals. Output in /images.
 
